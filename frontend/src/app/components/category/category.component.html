@@ -1,0 +1,21 @@
+<div *ngIf="categories.length > 0; else infoText">
+  <mat-card *ngFor="let category of categories; let i = index">
+    <mat-card-title>{{ category.name }}</mat-card-title>
+    <mat-card-actions>
+      <button mat-raised-button color="success" (click)="displayCategory(i)"> <mat-icon>search</mat-icon> </button>
+      <button mat-raised-button color="default" (click)="editCategory(i)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="deleteCategory(category.id)"
+      >
+      <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<ng-template #infoText>Add a Category class to start</ng-template>
+<button class="addCategory" mat-raised-button color="primary" (click)="addCategory()"> Add Category</button>
+

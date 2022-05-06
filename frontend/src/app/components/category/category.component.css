@@ -1,0 +1,18 @@
+#infoText {
+  text-align: center;
+}
+mat-card {
+  background-color: rgb(27, 12, 124);
+  margin: 5px;
+  color: white
+}
+
+.addCategory {
+  margin: 10px 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-card {
+  max-width: 400px;
+}
